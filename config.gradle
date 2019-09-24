@@ -1,5 +1,5 @@
 def kotlin_version = '1.3.31'
-def espresso_version = '3.1.0'
+def espresso_version = '3.2.0'
 def glide_version = '4.9.0'
 
 project.ext {
@@ -56,7 +56,7 @@ project.ext {
             "espresso-contrib"        : "androidx.test.espresso:espresso-contrib:${espresso_version}",
             "espresso-idling-resource": "androidx.test.espresso:espresso-idling-resource:${espresso_version}",
             "espresso-intent"         : "androidx.test.espresso:espresso-intents:${espresso_version}",
-            "test-runner"             : "androidx.test:runner:1.1.0-alpha3",
-            "test-rules"              : "androidx.test:rules:1.1.0-alpha3"
+            "test-runner"             : "androidx.test:runner:1.2.0",
+            "test-rules"              : "androidx.test:rules:1.2.0"
     ]
 }
