@@ -5,6 +5,7 @@ import com.qingmei2.rximagepicker.entity.ConfigProvider
 import com.qingmei2.rximagepicker.ui.ActivityPickerViewController
 import com.qingmei2.rximagepicker.ui.ICustomPickerConfiguration
 
+@Suppress("UNCHECKED_CAST")
 class ImagePickerController(private val configProvider: ConfigProvider) {
 
     fun display() {

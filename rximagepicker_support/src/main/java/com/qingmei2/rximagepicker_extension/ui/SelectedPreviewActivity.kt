@@ -25,8 +25,8 @@ open class SelectedPreviewActivity : BasePreviewActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val bundle = intent.getBundleExtra(BasePreviewActivity.EXTRA_DEFAULT_BUNDLE)
-        val selected = bundle.getParcelableArrayList<Item>(SelectedItemCollection.STATE_SELECTION)
+        val bundle = intent.getBundleExtra(EXTRA_DEFAULT_BUNDLE)
+        val selected = bundle?.getParcelableArrayList<Item>(SelectedItemCollection.STATE_SELECTION)!!
         mAdapter.addAll(selected)
         mAdapter.notifyDataSetChanged()
         if (mSpec.countable) {
@@ -35,6 +35,6 @@ open class SelectedPreviewActivity : BasePreviewActivity() {
             mCheckView.setChecked(true)
         }
         mPreviousPos = 0
-        updateSize(selected!![0])
+        updateSize(selected[0])
     }
 }

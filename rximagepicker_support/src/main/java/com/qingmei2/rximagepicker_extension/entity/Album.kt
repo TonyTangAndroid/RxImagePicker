@@ -47,9 +47,9 @@ class Album : Parcelable {
     }
 
     internal constructor(source: Parcel) {
-        id = source.readString()
-        coverPath = source.readString()
-        mDisplayName = source.readString()
+        id = source.readString()!!
+        coverPath = source.readString()!!
+        mDisplayName = source.readString()!!
         count = source.readLong()
     }
 

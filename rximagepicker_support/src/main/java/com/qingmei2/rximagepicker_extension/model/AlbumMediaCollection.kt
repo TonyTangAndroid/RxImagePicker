@@ -35,7 +35,7 @@ class AlbumMediaCollection : androidx.loader.app.LoaderManager.LoaderCallbacks<C
 
     override fun onCreateLoader(id: Int, args: Bundle?): androidx.loader.content.Loader<Cursor> {
         val context = mContext!!.get()
-        val album = args!!.getParcelable<Album>(ARGS_ALBUM)
+        val album = args!!.getParcelable<Album>(ARGS_ALBUM)!!
 
         return AlbumMediaLoader.newInstance(context, album,
                 album.isAll && args.getBoolean(ARGS_ENABLE_CAPTURE, false))
